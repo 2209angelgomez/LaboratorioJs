@@ -1,10 +1,8 @@
 var cc=prompt("Ingrse su número de cédula");
-if(isNaN (cc)){
-    alert("Valor ingresado incorrecto")
+while (isNaN(cc)) {
+    alert("Valor jjl");
+    cc=prompt("Ingrse su número de cédula"); 
 }
-
-
-var name=prompt("Ingrese su nombre");
 
 
 
