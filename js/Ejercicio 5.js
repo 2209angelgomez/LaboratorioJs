@@ -1,6 +1,6 @@
 var cc=prompt("Ingrse su número de cédula");
 while (isNaN(cc)) {
-    alert("Valor jjl");
+    alert("Valor ingresado incorrecto");
     cc=prompt("Ingrse su número de cédula"); 
 }
 
