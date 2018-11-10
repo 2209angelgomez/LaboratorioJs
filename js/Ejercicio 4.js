@@ -2,7 +2,7 @@ var number=0;
 var sum=0;
 var value1,value2,value3,value4;
 
-num=prompt(" Ingrese un número ");
+number=prompt(" Ingrese un número ");
 
 
 value1= number/10;
