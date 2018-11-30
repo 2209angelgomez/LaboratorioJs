@@ -1,55 +1,43 @@
-var AgeM;
-var AgeW;
-var cont=1;
-var cont1=1;
-var edad_joven=1000;
-var promedio_edadH=0;
-var promedio_edadM=0;
-var cantHombres=0;
-var cantMujeres=0;
-var cantPersonas=0;
-var sumaH=0;
-var sumaM=0;
-        
-prompt( "Digite las edades de los hombres que asistieron a la fiesta.");
-    
-    while (AgeM != 0 ){
-              edad=document.write( "Edad: "+cont);
-              if (AgeM>=18){
-                if (edadH<edad_joven){
-                    edad_joven=AgeM;
-                }
-                cantHombres++;
-                cont++;
-                sumaH=sumaH+AgeM;
-              }else{
-                    alert( "No se permiten menores de edad a la fiesta.", "Error",0);
-              }           
+var countmen=0;
+var countwomen=0;
+var agewomen=0;
+var agemen=0;
+var gender;
+var age;
+var sum;
+var avgwomen;
+var avgmen;
+
+
+gender=prompt("Por favor ingrese su género");
+age=parseInt(prompt("Por favor ingrese su edad"));
+
+while(gender!=isNaN && isNaN(age)){
+    alert("Por favor ingrese valores validos");
+    gender=prompt("Por favor ingrese su genero");
+    age=parseInt(prompt("Por favor ingrese su edad"));
+}
+while (age<18){
+    alert("No se admiten menores de edad")
+    gender=prompt("Por favor ingrese su genero");
+    age=parseInt(prompt("Por favor ingrese su edad"));
+}
+
+while (age!=0) {
+    if(gender=="hombre"){
+        countmen++;
+        agemen=agemen+age;
     }
-    
-    prompt("Digite las edades de las mujeres que asistieron a la fiesta.");
+    else if(gender=="mujer"){
+        countwomen++;
+        agewomen=agewomen+age; 
+    }
+    gender=prompt("Por favor ingrese su genero");
+    age=parseInt(prompt("Por favor ingrese su edad"));
+}
 
-    while (AgeW != 0){
-              AgeW=document.write( "Edad: "+cont1);
-              if (AgeW>=18){
-                if (AgeW<edad_joven){
-                    edad_joven=AgeW;
-                }
-                cantMujeres++;
-                cont1++;
-                sumaM=sumaM+edadM;
-              }else{
-                    alert( "No se permiten menores de edad a la fiesta.","Error",0);
-              }           
-   } 
-    promedio_edadH=sumaH/cantHombres;
-    promedio_edadM=sumaM/cantMujeres;
-    cantPersonas=cantHombres+cantMujeres;
-    
-   document.write( "La cantidad de personas que asistieron a la fiesta es: " + cantPersonas+"\n"+
-           "Cantidad de hombres: "+cantHombres+"\n"+
-           "Cantidad de mujeres: "+cantMujeres+"\n"+
-           "Promedio edad hombres: "+promedio_edadH+"\n"+
-           "Promedio edad mujeres: "+promedio_edadM+"\n"+
-           "Edad mas joven: "+edad_joven);    
-
+sum=countmen+countwomen;
+avgwomen=agewomen/countwomen;
+avgmen=agemen/countmen;
+document.write("<p>A la fiesta ingresaron "+sum+"</p><p>Ingresaron "+countmen+" hombres</p><p>Ingresaron "+countwomen+" mujeres");
+document.write("<p>El promedio de edad por hombres es de: "+avgmen+"</p><p>El promedio de edad por mujeres es de: "+avgwomen+"</p>");

@@ -20,8 +20,8 @@ while (nContador<=10) {
     nContador=nContador+1;
 
 
-document.write("<h1> Mul", sumaMultiplotres +"<br>");
-document.write(null, sumaUltimocinco +"<br>");
-document.write(sumaValores +"<br>");
+document.write("<h1> mul", sumaMultiplotres +"<br>");
+document.write( sumaUltimocinco +"<br>");
+document.write( "sumv"+sumaValores  +"<br>");
     }
     
